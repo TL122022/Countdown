@@ -1,2 +1,2 @@
 # Countdown
-EOY Countdown
+EOY Exam Countdown
