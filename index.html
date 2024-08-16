@@ -45,9 +45,45 @@
             font-family: 'Ysabeau SC', sans-serif;
             color: #ffffff;            
         }
+                .paint {
+            position: absolute;
+            width: 15em;
+            height: 15em;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .8;
+            /* animation: ; */
+            z-index: 0;
+        }
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                scale: .1;
+            }
+            100% {
+                opacity: .8;
+                scale: 1;
+            }
+        }
+        .purple {
+            background: #4500BE;
+            animation: appear 2s ease-out, spinPurple 4s linear infinite;
+        }
+        @keyframes spinPurple {
+            33% {
+                background: #A400BE;
+            }
+            66% {
+                background: #0019BE;
+            }
+            100% {
+                background: #4500BE;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="paint purple"></div>
     <div>
         <h1>Tick tock, time to focus</h1>
         <p class="countdown" id="countdown"></p>
